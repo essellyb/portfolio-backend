@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" style="margin:0; padding:0; background-color:#F4F4F2;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Portfolio Message - David Essel</title>
+    <style>
+        .cta-button {
+            background-color: #2954FF;
+            color: #FFFFFF !important;
+        }
+        .cta-button:hover {
+            background-color: #1739C9 !important;
+            color: #FFFFFF !important;
+        }
+    </style>
+</head>
+
+<body style="margin:0; padding:0; font-family:'Segoe UI', Helvetica, Arial, sans-serif; background-color:#F4F4F2;">
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center" style="padding:32px 16px;">
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                   style="max-width:640px; background-color:#FFFFFF; border-radius:14px; overflow:hidden; box-shadow:0 4px 18px rgba(0,0,0,0.06);">
+
+                <!-- Brand strip -->
+                <tr>
+                    <td>
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="70%" style="background-color:#2954FF; height:4px;"></td>
+                                <td width="20%" style="background-color:#E2E5EE; height:4px;"></td>
+                                <td width="10%" style="background-color:#0B0E17; height:4px;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- HERO SECTION -->
+                <tr>
+                    <td align="center" valign="middle" bgcolor="#0B0E17"
+                        style="background-image: linear-gradient(135deg, #0B0E17, #1739C9); height: 200px;">
+                        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="center" valign="middle" style="padding: 76px 20px;">
+                                    <span style="display:inline-block; padding:10px 26px;
+                                                 border-top:1px solid rgba(255,255,255,0.35);
+                                                 border-bottom:1px solid rgba(255,255,255,0.35);">
+                                      <h1 style="margin:0; color:#FFFFFF; font-size:22px; letter-spacing:4px; font-weight: normal;">
+                                        MY PORTFOLIO WEBSITE
+                                      </h1>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- INTRO -->
+                <tr>
+                    <td style="padding:40px 44px 8px; text-align:left;">
+                        <p style="margin:0 0 6px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#2954FF; font-weight:600;">
+                            New Project Inquiry
+                        </p>
+                        <p style="margin:0; font-size:16px; color:#0B0E17; line-height:1.6;">
+                            You've received a new message via the portfolio contact form.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- DETAILS -->
+                <tr>
+                    <td style="padding:8px 44px;">
+                        <table width="100%">
+                            <tr>
+                                <td style="padding:14px 0 4px; border-bottom:1px solid #EFEFED; text-align:left;">
+                                    <p style="margin:0 0 6px; font-size:11px; text-transform:uppercase; color:#6B6B68;">Name</p>
+                                    <p style="margin:0; font-size:14px; color:#0B0E17;" th:text="${name}">John Doe</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:14px 0 4px; border-bottom:1px solid #EFEFED; text-align:left;">
+                                    <p style="margin:0 0 6px; font-size:11px; text-transform:uppercase; color:#6B6B68;">Email</p>
+                                    <p style="margin:0; font-size:14px; color:#0B0E17;">
+                                        <a th:href="'mailto:' + ${email}" th:text="${email}" style="color:#2954FF; text-decoration:none;">john@example.com</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:14px 0 4px; border-bottom:1px solid #EFEFED; text-align:left;">
+                                    <p style="margin:0 0 6px; font-size:11px; text-transform:uppercase; color:#6B6B68;">Project Type</p>
+                                    <p style="margin:0; font-size:14px; color:#0B0E17;" th:text="${projectType}">Backend Development</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:14px 0 4px; border-bottom:1px solid #EFEFED; text-align:left;">
+                                    <p style="margin:0 0 6px; font-size:11px; text-transform:uppercase; color:#6B6B68;">Budget Range</p>
+                                    <p style="margin:0; font-size:14px; color:#0B0E17;" th:text="${budgetRange}">$1,000 - $5,000</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:14px 0; text-align:left;">
+                                    <p style="margin:0 0 6px; font-size:11px; text-transform:uppercase; color:#6B6B68;">Message</p>
+                                    <p style="margin:0; line-height:1.65; white-space:pre-wrap; text-align:left; background-color:#F6F7FB; padding:14px 16px; border-left:3px solid #2954FF; color:#0B0E17; font-size:14px;"
+                                       th:text="${message}">
+                                        Message content goes here.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- CTA -->
+                <tr>
+                    <td style="padding:36px 44px; text-align:center;">
+                        <a th:href="'mailto:' + ${email} + '?subject=Re:%20Your%20Enquiry'"
+                           class="cta-button"
+                           style="display:inline-block;
+                                  text-decoration:none;
+                                  padding:15px 42px;
+                                  border-radius:6px;
+                                  font-size:15px;
+                                  font-weight:600;">
+                            Reply to Client
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- FOOTER -->
+                <tr>
+                    <td style="background-color:#2954FF; text-align:center; padding:26px 30px;">
+                        <p style="margin:0 0 4px; font-size:12px; color:#FFFFFF;">
+                            &copy; 2026 David Essel — All rights reserved.
+                        </p>
+                        <p style="margin:0; font-size:11px; color:#E2E5EE;">
+                            Building reliable software that makes an impact.
+                        </p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
